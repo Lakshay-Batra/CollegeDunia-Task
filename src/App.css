@@ -1,38 +1,208 @@
 .App {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* CARD */
+.card {
+  width: 607px;
+  border: 0.5px solid #555555;
+  box-shadow: 1px 1px 5px 2px #888888;
+  border-radius: 3px;
+  margin-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* IMAGE CONTAINER */
+
+.card-image-background {
+  width: 607px;
+  height: 221px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-image-top-layer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+/* BOOKMARK RIBBON */
+
+.card-image-top-layer .bookmark-ribbon {
+  position: absolute;
+  right: -1px;
+  top: -20px;
+  width: 120px;
+  height: 0;
+  border-bottom: 20px solid rgb(88, 175, 209);
+  border-top: 20px solid rgb(88, 175, 209);
+  border-left: 15px solid transparent;
   color: white;
+  margin-bottom: 20px;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-image-top-layer .bookmark-ribbon span {
+  position: relative;
+  top: -12px;
+  text-align: center;
+  right: -14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* RATING BOX */
+
+.card-image-top-layer .rating-box {
+  position: absolute;
+  top: 30px;
+  right: 5px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(243, 181, 11);
+  color: white;
+  font-size: smaller;
+}
+
+.card-image-top-layer .rating-box span {
+  font-size: larger;
+}
+
+.card-image-top-layer .bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capsule-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.white-capsule {
+  background-color: white;
+  color: #333;
+  padding: 3px 7px;
+  margin: 0 0 5px 5px;
+  border-radius: 20px;
+}
+
+.ranking {
+  color: white;
+  padding-right: 5px;
+}
+
+/* CARD DETAILS CONTAINER */
+
+.card-details-container {
+  display: flex;
+  padding: 2px 5px;
+  color: #444;
+}
+.card-details-container .details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-details-container .pricing {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: right;
+}
+.card-details-container span {
+  margin: 0;
+  font-size: smaller;
+}
+
+.card-details-container p {
+  margin: 0;
+}
+
+.card-details-container h2,h3 {
+  margin: 0;
+}
+
+.card-details-container .college-name {
+  color: #555;
+  display: inline;
+}
+
+.grey-text {
+  color: #888;
+}
+
+.green-text {
+  color: rgb(0, 128, 128);
+  font-weight: bold;
+}
+
+.card-details-container .price {
+  color: rgb(228, 6, 6);
+}
+
+.card-details-container .previous-price-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-details-container .previous-price {
+  text-decoration: line-through;
+}
+
+.card-details-container .discount-tag-triangle {
+  width: 0;
+  display: inline-block;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 10px solid rgb(228, 6, 6);
+}
+
+.card-details-container .discount-tag {
+  width: 30px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 6, 6);
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  /* padding: 1.5px 0; */
+}
+
+/* CARD FOOTER */
+
+.card-footer {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+}
+
+.card-footer .offer p {
+  padding: 5px 5px 5px 2px;
+  flex-grow: 1;
+  font-size: smaller;
+  background-color: rgb(157, 232, 245);
+  border-radius: 0 20px 20px 0;
+}
+
+.card-footer .amenities {
+  padding-right: 5px;
 }
