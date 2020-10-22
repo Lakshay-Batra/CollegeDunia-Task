@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/CollegeDunia-Task/precache-manifest.6755d2cf640eb3d5cd639a3daa3527e7.js"
+  "/CollegeDunia-Task/precache-manifest.1f2694d9f87eddd96309ac85b3d5c087.js"
 );
 
 self.addEventListener('message', (event) => {
