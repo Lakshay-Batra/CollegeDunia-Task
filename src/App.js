@@ -9,11 +9,8 @@ function App() {
   const [isFetching, setIsFetching] = useState(false);
 
   function handleScroll() {
-    console.log(window.innerHeight);
-    console.log(window.scrollY);
-    console.log(document.documentElement.offsetHeight);
-    console.log("...................");
-    if (window.innerHeight + window.scrollY >= document.documentElement.offsetHeight) {
+    // use math.floor for scrollY as it gives float value on some browser versions and will not make it ever greater than offsetHeight
+    if (window.innerHeight + (Math.floor(window.scrollY)+1) >= document.body.offsetHeight) {
       setIsFetching(true);
     }
   }
