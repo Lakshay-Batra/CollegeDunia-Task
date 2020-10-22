@@ -9,10 +9,13 @@ function App() {
   const [isFetching, setIsFetching] = useState(false);
 
   function handleScroll() {
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) {
-      return;
+    console.log(window.innerHeight);
+    console.log(document.documentElement.scrollTop);
+    console.log(document.documentElement.offsetHeight);
+    console.log("...................");
+    if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight) {
+      setIsFetching(true);
     }
-    setIsFetching(true);
   }
   // Adding scroll event listener 
   useEffect(() => {
