@@ -10,10 +10,10 @@ function App() {
 
   function handleScroll() {
     console.log(window.innerHeight);
-    console.log(document.documentElement.scrollTop);
+    console.log(window.scrollY);
     console.log(document.documentElement.offsetHeight);
     console.log("...................");
-    if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight) {
+    if (window.innerHeight + window.scrollY >= document.documentElement.offsetHeight) {
       setIsFetching(true);
     }
   }
